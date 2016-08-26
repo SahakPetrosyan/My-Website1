@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>	Smart Robot</title>
+		<link rel="stylesheet" type="text/css" href="robot.css">
+	</head>
+	<body>
+	    <div id="questionDiv">
+	        <h1>Ask Me Your Question Here</h1>
+		<form>
+		    <label>
+		        <input type="text" placeholder="Ask Your Question" id="question">
+		    </label>
+		</form>
+		</div>
+		<div id="showAnswer">
+		    <h2>The Answer is:</h2>
+		    <h3 id="pataskhan"> Sahak</h3>
+		</div>
+		 <h1>Username</h1>
+		<form>
+		    <label>
+		        <input type="text" placeholder="Type Your Username" id="username">
+		    </label>
+		</form>
+		 <h1>Password</h1>
+		<form>
+		    <label>
+		        <input type="password" id="password">
+		    </label>
+		</form>
+		<form>
+		    <label>
+		        <input type="button" id="button" onclick="showAnswer()" value="Login and Answer the question">
+		    </label>
+		</form>
+	</body>
+	<script>
+	var showAnswer = function(){
+    var hiddenDiv= document.getElementById("showAnswer");
+    var answer = document.getElementById("pataskhan");
+    var password = document.getElementById("password").value;
+    answer.innerHTML = password;
+    document.getElementById("questionDiv").style.display = "none";
+    hiddenDiv.style.display = "block";
+};
+	</script>
+</html>
